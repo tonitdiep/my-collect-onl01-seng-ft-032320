@@ -1,9 +1,8 @@
 def my_collect(array)
-i = 0
-while i < array.length
-if yield (array[i])
-return array[i]
-end
-i = i + 1
+num = 0
+collection = []
+while num < array.length
+  collection  << yield (array[i]) 
+  num += 1
 end
 end
