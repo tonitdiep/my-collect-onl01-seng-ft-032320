@@ -1,11 +1,9 @@
 def my_collect(array)
 i = 0
 while i < array.length
-#if
-yield (array[i])
-#return array[i]
-#end
-i += 1
+if yield (array[i])
+return array[i]
 end
-array.push
+i = i + 1
+end
 end
